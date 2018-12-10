@@ -1,0 +1,10 @@
+h1.entry-title {
+
+	@include media-breakpoint-up(md) {
+		margin-top: 5rem;
+	}
+}
+
+#right-sidebar {
+	padding-top: 8.7rem;
+}

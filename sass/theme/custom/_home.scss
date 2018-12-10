@@ -1,0 +1,21 @@
+#home-carousel {
+
+	img {
+		max-height: 20rem;
+		object-fit: cover;
+	}
+
+	.carousel-info {
+
+		@include media-breakpoint-up(md) {
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			z-index: 5;
+
+
+		}
+	}
+
+} 

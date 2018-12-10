@@ -1,0 +1,49 @@
+.site-logo {
+	position: absolute;
+	z-index: 10;
+	background-color: white;
+	padding: 0.8rem;
+	width: 5.5rem;
+	top: -1.5rem;
+
+	@include media-breakpoint-up(lg) {
+		width: 7rem;
+		padding: 1rem;
+		top: -2.5rem;
+	}
+
+	&:hover {
+		background-color: #EEE;
+	}
+}
+
+#wrapper-navbar {
+
+	@include media-breakpoint-up(md) {
+		margin-top: 2rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 3rem;
+	}
+}
+
+.navbar-toggler {
+	border: 0;
+	padding-left: 0;
+	padding-right: 0;
+	outline: none;
+
+	&:focus {
+		outline: 0;
+	}
+}
+
+.donate-button {
+
+	@include media-breakpoint-down(sm) {
+		position: absolute;
+		right: 0;
+		top: -2px;
+	}
+}

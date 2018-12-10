@@ -1,5 +1,9 @@
 body {
-	font-family: 'Source Sans Pro', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.h1, .h2, .h3, h1, h2, h3 {
+	font-family: 'Fjalla One', sans-serif;
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
@@ -8,4 +12,51 @@ body {
 
 #wrapper-navbar {
 	font-family: 'Fjalla One', sans-serif;
+}
+
+.text-300 {
+	font-weight: 300 !important;
+}
+
+.text-400 {
+	font-weight: 400 !important;
+}
+
+.text-600 {
+	font-weight: 600 !important;
+}
+
+.text-700 {
+	font-weight: 700 !important;
+}
+
+.text-900 {
+	font-weight: 900 !important;
+}
+
+p {
+
+	a {
+		font-weight: 600;
+	}
+}
+
+.gray-links {
+
+	a {
+
+		&:link,
+		&:visited {
+			color: inherit;
+		}
+
+		&:hover,
+		&:active {
+			text-decoration: none;
+		}
+	}
+
+	.colored {
+		color: #0061ff !important;
+	}
 }
