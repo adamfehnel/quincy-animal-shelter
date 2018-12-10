@@ -25,13 +25,13 @@ $container = get_theme_mod( 'understrap_container_type' );
 		</ol>
 		<div class="carousel-inner">
 			<div class="carousel-item active">
-				<img class="d-block w-100" src="/wp-content/themes/qas/img/home-slider-1.jpg" alt="First slide">
+				<img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/home-slider-1.jpg" alt="First slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="/wp-content/themes/qas/img/home-slider-2.jpg" alt="Second slide">
+				<img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/home-slider-2.jpg" alt="Second slide">
 			</div>
 			<div class="carousel-item">
-				<img class="d-block w-100" src="/wp-content/themes/qas/img/home-slider-3.jpg" alt="Third slide">
+				<img class="d-block w-100" src="<?php bloginfo('template_url')?>/img/home-slider-3.jpg" alt="Third slide">
 			</div>
 		</div>
 		<div class="carousel-info mt-4 mt-lg-5">
