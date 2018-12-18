@@ -49,14 +49,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 							<h1 class="navbar-brand mb-0">
 								<a class="site-logo d-none d-md-block" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-									<img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo">
+									<!-- <img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> -->
+									<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">
 								</a>
 							</h1>
 
 						<?php else : ?>
 
 							<a class="site-logo d-none d-md-block navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-								<img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo">
+								<!-- <img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> -->
+								<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">
 							</a>
 
 						<?php endif; ?>

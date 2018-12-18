@@ -114,7 +114,7 @@ if ( ! function_exists( 'understrap_custom_excerpt_more' ) ) {
 	}
 }
 
-add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
+//add_filter( 'wp_trim_excerpt', 'understrap_all_excerpts_get_more_link' );
 
 if ( ! function_exists( 'understrap_all_excerpts_get_more_link' ) ) {
 	/**
