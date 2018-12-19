@@ -34,6 +34,15 @@ body {
 	font-weight: 900 !important;
 }
 
+.text-inherit,
+a.text-inherit:link,
+a.text-inherit:visited,
+a.text-inherit:hover,
+a.text-inherit:active {
+	color: inherit;
+}
+
+
 p {
 
 	a {

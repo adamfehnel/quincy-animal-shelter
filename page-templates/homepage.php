@@ -82,19 +82,23 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php if ( !empty( $posts ) ) : ?>
 						<div class="full-width gray-box pb-5">
 							<div class="container">
-								<h2 class="text-center pt-5 pb-4">Featured Pets</h2>
+								<h2 class="text-center pt-5 pb-4">
+									<a href="#" class="text-inherit">Featured Pets</a>
+								</h2>
 								<div class="row">
 									
 									<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-										<div class="col-sm-6 col-md-3">
+										<div class="col-sm-6 col-md">
 											<p>
-												<a href="#">
-													<?php the_post_thumbnail( 'medium' ); ?>
+												<a href="<?php the_permalink(); ?>">
+													<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 												</a>
 											</p>
-											<p class="h5"><?php the_title(); ?></p>
+											<p class="h5">
+												<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
+											</p>
 											<p><?php the_excerpt(); ?></p>
-											<p><a href="#">Read more</a></p>
+											<p><a href="<?php the_permalink(); ?>">Read more</a></p>
 										</div>
 									<?php endforeach; ?>
 
@@ -105,89 +109,82 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</div>
 						</div>
 					<?php endif; ?>
-					<h2 class="text-center pt-5 pb-4">News + Upcoming Events</h2>
-					<div class="media pb-3">
-						<img class="mr-3 wp-image-180 w-25" title="" src="/wp-content/uploads/2018/12/event-300x203.jpg" alt="" width="300" height="203" />
-						<div class="media-body">
-							<h5 class="mt-0">Media heading</h5>
-							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-							<p><a href="#">Read more</a></p>
-						</div>
-					</div>
-					<div class="media pb-3">
-						<img class="mr-3 wp-image-180 w-25" title="" src="/wp-content/uploads/2018/12/event-300x203.jpg" alt="" width="300" height="203" />
-						<div class="media-body">
-							<h5 class="mt-0">Media heading</h5>
-							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-							<p><a href="#">Read more</a></p>
-						</div>
-					</div>
-					<div class="media pb-3">
-						<img class="mr-3 wp-image-180 w-25" title="" src="/wp-content/uploads/2018/12/event-300x203.jpg" alt="" width="300" height="203" />
-						<div class="media-body">
-							<h5 class="mt-0">Media heading</h5>
-							<p>Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.</p>
-							<p><a href="#">Read more</a></p>
-						</div>
-					</div>
+
+					<?php
+					global $post;
+					$args = array( 'numberposts' => 3, 'category_name' => 'events' );
+					$posts = get_posts( $args );
+					?>
+					<?php if ( !empty( $posts ) ) : ?>
+						<h2 class="text-center pt-5 pb-4">
+							<a href="#" class="text-inherit">News + Upcoming Events</a>
+						</h2>
+									
+						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+							<div class="media pb-3">
+								<a href="<?php the_permalink(); ?>" class="mr-3 w-25 d-none d-sm-block">
+									<?php the_post_thumbnail( 'medium' ); ?>
+								</a>
+								<div class="media-body">
+									<h5 class="mt-0">
+										<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
+									</h5>
+									<p><?php the_excerpt(); ?></p>
+									<p><a href="<?php the_permalink(); ?>">Read more</a></p>
+								</div>
+							</div>
+						<?php endforeach; ?>
+
+					<?php endif; ?>
+
 					<div class="full-width gray-box py-3 mt-5">
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col col-auto">
 									<form class="form-inline h5 text-300 mb-0 d-block d-md-flex">
-										<div>Get "The Scoop" About QAS</div>
-										<div class="form-group mx-sm-3">
+										<div class="mt-3 mt-md-0">Get "The Scoop" About QAS</div>
+										<div class="form-group mx-md-3">
 											<label for="scoop-email" class="sr-only">Email address</label>
-											<input type="email" class="form-control" id="scoop-email" placeholder="person@example.com">
+											<input type="email" class="form-control w-100 my-3 my-md-0" id="scoop-email" placeholder="person@example.com">
 										</div>
-										<button type="submit" class="btn btn-primary mt-3">Sign Up</button>
+										<button type="submit" class="btn btn-primary mb-3 mb-md-0">Sign Up</button>
 									</form>
 								</div>
 							</div>
 						</div>
 					</div>
-					<h2 class="text-center pt-5 pb-4">Ways To Help</h2>
-					<div class="row">
-						<div class="col-sm-6 col-md-3">
-							<p>
-								<a href="#">
-									<img class="alignnone size-medium wp-image-155 w-100" title="" src="/wp-content/uploads/2018/12/golden-retriever-puppy-300x200.jpg" alt="" width="300" height="200" />
-								</a>
-							</p>
-							<p class="h5">Doggo</p>
-							<p>Donec ultrices tortor in quam pellentesque volutpat. Sed scelerisque luctus est non rhoncus. Ut efficitur nunc quis aliquet volutpat. In velit orci, convallis sed placerat ut, molestie nec ante. </p>
+
+					<?php
+					global $post;
+					$args = array( 'numberposts' => 4, 'category_name' => 'ways-to-help' );
+					$posts = get_posts( $args );
+					?>
+					<?php if ( !empty( $posts ) ) : ?>
+						<h2 class="text-center pt-5 pb-4">
+							<a href="#" class="text-inherit">Ways To Help</a>
+						</h2>
+						<div class="row">
+									
+							<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+								<div class="col-sm-6 col-md">
+									<p>
+										<a href="#">
+											<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+										</a>
+									</p>
+									<p class="h5">
+										<a href="<?php the_permalink(); ?>" class="text-inherit"><strong><?php the_title(); ?></strong></a>
+									</p>
+									<p><?php the_content(); ?></p>
+								</div>
+
+							<?php endforeach; ?>
+						
 						</div>
-						<div class="col-sm-6 col-md-3">
-							<p>
-								<a href="#">
-									<img class="alignnone size-medium wp-image-155 w-100" title="" src="/wp-content/uploads/2018/12/golden-retriever-puppy-300x200.jpg" alt="" width="300" height="200" />
-								</a>
-							</p>
-							<p class="h5">Doggo</p>
-							<p>Donec ultrices tortor in quam pellentesque volutpat. Sed scelerisque luctus est non rhoncus. Ut efficitur nunc quis aliquet volutpat. In velit orci, convallis sed placerat ut, molestie nec ante. </p>
+						<div class="row justify-content-center pt-4">
+							<a class="btn btn-primary px-5 py-2" href="#">Join Our Team</a>
 						</div>
-						<div class="col-sm-6 col-md-3">
-							<p>
-								<a href="#">
-									<img class="alignnone size-medium wp-image-155 w-100" title="" src="/wp-content/uploads/2018/12/golden-retriever-puppy-300x200.jpg" alt="" width="300" height="200" />
-								</a>
-							</p>
-							<p class="h5">Doggo</p>
-							<p>Donec ultrices tortor in quam pellentesque volutpat. Sed scelerisque luctus est non rhoncus. Ut efficitur nunc quis aliquet volutpat. In velit orci, convallis sed placerat ut, molestie nec ante. </p>
-						</div>
-						<div class="col-sm-6 col-md-3">
-							<p>
-								<a href="#">
-									<img class="alignnone size-medium wp-image-155 w-100" title="" src="/wp-content/uploads/2018/12/golden-retriever-puppy-300x200.jpg" alt="" width="300" height="200" />
-								</a>
-							</p>
-							<p class="h5">Doggo</p>
-							<p>Donec ultrices tortor in quam pellentesque volutpat. Sed scelerisque luctus est non rhoncus. Ut efficitur nunc quis aliquet volutpat. In velit orci, convallis sed placerat ut, molestie nec ante. </p>
-						</div>
-					</div>
-					<div class="row justify-content-center pt-4">
-						<a class="btn btn-primary px-5 py-2" href="#">Join Our Team</a>
-					</div>
+					<?php endif; ?>
 
 				</main><!-- #main -->
 

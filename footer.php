@@ -58,6 +58,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php wp_footer(); ?>
 
+<a href="#" id="back-to-top" style="display: none;">
+	<i class="fa fa-chevron-up"></i>
+	<div class="back-text">Top</div>
+</a>
+
 </body>
 
 </html>
