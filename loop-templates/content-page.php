@@ -35,6 +35,34 @@ if ( ! defined( 'ABSPATH' ) ) {
 		) );
 		?>
 
+		<?php if (is_page('news-events')) : ?>
+			<h3 class="pt-4 pb-4">Event posts</h3>
+
+			<?php
+			global $post;
+			$args = array( 'numberposts' => 3, 'category_name' => 'events' );
+			$posts = get_posts( $args );
+			?>
+			<?php if ( !empty( $posts ) ) : ?>
+							
+				<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+					<div class="media pb-3">
+						<a href="<?php the_permalink(); ?>" class="mr-3 w-25 d-none d-sm-block">
+							<?php the_post_thumbnail( 'medium' ); ?>
+						</a>
+						<div class="media-body">
+							<h5 class="mt-0">
+								<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
+							</h5>
+							<p><?php the_excerpt(); ?></p>
+							<p><a href="<?php the_permalink(); ?>">Read more</a></p>
+						</div>
+					</div>
+				<?php endforeach; ?>
+
+			<?php endif; ?>
+		<?php endif; ?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
