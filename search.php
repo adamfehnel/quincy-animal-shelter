@@ -30,7 +30,7 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 					<header class="page-header">
 						
-							<h1 class="page-title"><?php printf(
+							<h1 class="page-title entry-title"><?php printf(
 							/* translators:*/
 							 esc_html__( 'Search Results for: %s', 'understrap' ),
 								'<span>' . get_search_query() . '</span>' ); ?></h1>

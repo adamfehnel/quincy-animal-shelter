@@ -86,7 +86,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					)
 				); ?>
 
-				<a class="btn btn-light btn-sm ml-2 donate-button" href="#">Donate</a>
+				<a class="btn btn-light btn-sm ml-2 donate-button" href="/get-involved/donate/">Donate</a>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>
