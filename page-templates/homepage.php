@@ -18,7 +18,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <div class="wrapper py-0" id="full-width-page-wrapper">
 
 	<div id="home-carousel" class="carousel slide position-relative" data-ride="carousel">
-		<ol class="carousel-indicators">
+		<ol class="carousel-indicators d-none d-md-flex">
 			<li data-target="#home-carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#home-carousel" data-slide-to="1"></li>
 			<li data-target="#home-carousel" data-slide-to="2"></li>

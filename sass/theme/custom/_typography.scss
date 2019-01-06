@@ -38,6 +38,11 @@ a.text-inherit:active {
 	color: inherit;
 }
 
+a {
+	&:hover {
+		text-decoration-style: dotted;
+	}
+}
 
 p {
 
