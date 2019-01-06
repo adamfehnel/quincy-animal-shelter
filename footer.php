@@ -16,7 +16,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <?php get_template_part( 'sidebar-templates/sidebar', 'footerfull' ); ?>
 
-<div class="wrapper gray-box mt-5" id="wrapper-footer">
+<div class="wrapper gray-box <?php if ( !is_front_page() ) : ?>mt-5<?php endif; ?>" id="wrapper-footer">
 
 	<div class="<?php echo esc_attr( $container ); ?>">
 

@@ -3,15 +3,11 @@ body {
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
-	font-family: 'Fjalla One', sans-serif;
+	font-weight: 400;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h4, .h5, .h6, h4, h5, h6 {
 	font-weight: 700;
-}
-
-#wrapper-navbar {
-	font-family: 'Fjalla One', sans-serif;
 }
 
 .text-300 {
@@ -46,7 +42,7 @@ a.text-inherit:active {
 p {
 
 	a {
-		font-weight: 600;
+		font-weight: 700;
 	}
 }
 

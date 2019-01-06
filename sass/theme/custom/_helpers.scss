@@ -5,6 +5,21 @@
 	right: 50%;
 	margin-left: -50vw;
 	margin-right: -50vw;
+
+	&.patterned {
+		background-image: url('/wp-content/themes/qas/img/zig-zag-pattern.png');
+		background-repeat: repeat;
+	}
+
+	&.green {
+		background-color: $primary;
+		color: #FFF;
+	}
+
+	&.dark-blue {
+		background-color: #264653;
+		color: #FFF;
+	}
 }
 
 .gray-box {

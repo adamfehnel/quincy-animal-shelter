@@ -15,7 +15,7 @@ get_header();
 $container = get_theme_mod( 'understrap_container_type' );
 ?>
 
-<div class="wrapper pt-0" id="full-width-page-wrapper">
+<div class="wrapper py-0" id="full-width-page-wrapper">
 
 	<div id="home-carousel" class="carousel slide position-relative" data-ride="carousel">
 		<ol class="carousel-indicators">
@@ -41,7 +41,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="carousel-info mt-4 mt-lg-5">
 			<div class="container">
 				<div class="row justify-content-end">
-					<div class="col-md-5 col-lg-4 white-box py-3">
+					<div class="col-md-4 col-lg-3 white-box py-3">
 						<h5>Adoption Hours:</h5>
 						<?php echo $adoptionInfo->post_content; ?>
 					</div>
@@ -80,7 +80,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$posts = get_posts( $args );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
-						<div class="full-width gray-box pb-5">
+						<div class="full-width gray-box pb-5 patterned">
 							<div class="container">
 								<h2 class="text-center pt-5 pb-4">
 									<a href="#" class="text-inherit">Featured Pets</a>
@@ -104,7 +104,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								</div>
 								<div class="row justify-content-center pt-4">
-									<a class="btn btn-primary px-5 py-2" href="#">See All Pets</a>
+									<a class="btn btn-danger px-5 py-2" href="#">See All Pets</a>
 								</div>
 							</div>
 						</div>
@@ -137,7 +137,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endif; ?>
 
-					<div class="full-width gray-box py-3 mt-5">
+					<div class="full-width green py-3 mt-5">
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col col-auto">
@@ -147,7 +147,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											<label for="scoop-email" class="sr-only">Email address</label>
 											<input type="email" class="form-control w-100 my-3 my-md-0" id="scoop-email" placeholder="person@example.com">
 										</div>
-										<button type="submit" class="btn btn-primary mb-3 mb-md-0">Sign Up</button>
+										<button type="submit" class="btn btn-light mb-3 mb-md-0">Sign Up</button>
 									</form>
 								</div>
 							</div>
@@ -185,6 +185,33 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<a class="btn btn-primary px-5 py-2" href="#">Join Our Team</a>
 						</div>
 					<?php endif; ?>
+
+					<div class="full-width gray-box mt-5 py-5 dark-blue">
+						<div class="container text-center py-md-4">
+							
+							<p class="h2 mb-3">Donate Now!</p>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt nulla. Praesent ex sem, mattis vel ultrices ut.</p>
+							<div class="row justify-content-center py-3">
+								<div class="col-md col-md-auto mb-2 pr-md-0">
+									<a href="#" class="btn btn-block btn-light px-4">$25</a>
+								</div>
+								<div class="col-md col-md-auto mb-2 pr-md-0">
+									<a href="#" class="btn btn-block btn-light px-4">$35</a>
+								</div>
+								<div class="col-md col-md-auto mb-2 pr-md-0">
+									<a href="#" class="btn btn-block btn-primary px-4">$50</a>
+								</div>
+								<div class="col-md col-md-auto mb-2 pr-md-0">
+									<a href="#" class="btn btn-block btn-light px-4">$150</a>
+								</div>
+								<div class="col-md col-md-auto mb-2 pr-md-0">
+									<a href="#" class="btn btn-block btn-light px-4">Other</a>
+								</div>
+							</div>
+							<a href="#" class="btn btn-danger px-5 py-2">Continue</a>
+
+						</div>
+					</div>
 
 				</main><!-- #main -->
 
