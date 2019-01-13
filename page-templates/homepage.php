@@ -125,7 +125,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
 							<div class="media pb-3">
 								<a href="<?php the_permalink(); ?>" class="mr-3 w-25 d-none d-sm-block">
-									<?php the_post_thumbnail( 'medium' ); ?>
+									<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 								</a>
 								<div class="media-body">
 									<h5 class="mt-0">
