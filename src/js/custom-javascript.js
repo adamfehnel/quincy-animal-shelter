@@ -61,4 +61,14 @@ jQuery(function() {
 
 		jQuery('#donate-options-form').submit();
 	});
+
+	jQuery('#header-search-submit').click(function(e){
+		e.preventDefault();
+
+		if ( !jQuery('#s').val() ) {
+			jQuery('#s').focus();
+		} else {
+			jQuery('#header-search-form').submit();
+		}
+	});
 });

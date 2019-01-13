@@ -40,6 +40,22 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site" id="page">
 
+	<div id="search-button-wrapper">
+		<div class="container">
+			<div class="row justify-content-end py-2">
+				<div class="col col-md-4 col-lg-3 col-xl-2 px-0">
+					<form method="get" id="header-search-form" action="" role="search">
+						<label class="sr-only" for="s">Search</label>
+						<input class="form-control border-0" id="s" name="s" type="text" placeholder="Search …" value="">
+					</form>
+				</div>
+				<div class="col col-auto d-flex align-items-center">
+					<a href="#" id="header-search-submit"><i class="fa fa-search"></i></a>
+				</div>
+			</div>
+		</div>
+	</div>
+
 	<!-- ******************* The Navbar Area ******************* -->
 	<div id="wrapper-navbar" itemscope itemtype="http://schema.org/WebSite" class="position-relative">
 
@@ -57,17 +73,17 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<?php if ( is_front_page() && is_home() ) : ?>
 
 							<h1 class="navbar-brand mb-0">
-								<a class="site-logo d-none d-md-block" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-									<!-- <img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> -->
-									<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">
+								<a class="site-logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+									img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo">
+									<!-- <<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo"> -->
 								</a>
 							</h1>
 
 						<?php else : ?>
 
-							<a class="site-logo d-none d-md-block navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-								<!-- <img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> -->
-								<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">
+							<a class="site-logo navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+								<img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> 
+								<!-- <img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">-->
 							</a>
 
 						<?php endif; ?>
