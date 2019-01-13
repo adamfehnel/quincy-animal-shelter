@@ -38,7 +38,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PWPW6DB" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
-<div class="hfeed site" id="page">
+<div class="hfeed site d-flex flex-column" id="page">
 
 	<div id="search-button-wrapper">
 		<div class="container">
