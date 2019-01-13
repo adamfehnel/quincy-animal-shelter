@@ -102,7 +102,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 											<p><?php the_excerpt(); ?></p>
 											<p><a href="<?php the_permalink(); ?>">Read more</a></p>
 										</div>
-									<?php endforeach; ?> 
+									<?php endforeach; ?>
 
 								</div>
 								<div class="row justify-content-center pt-4">
