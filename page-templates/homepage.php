@@ -168,14 +168,20 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="row">
 									
 							<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+								<?php
+									$goodLink = get_post_meta($post->ID, 'alternateLink', true);
+									if ( empty( $goodLink ) ) {
+										$goodLink = get_the_permalink();
+									}
+								?>
 								<div class="col-sm-6 col-md">
 									<p>
-										<a href="<?php the_permalink(); ?>">
+										<a href="<?php echo $goodLink; ?>">
 											<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 										</a>
 									</p>
 									<p class="h5">
-										<a href="<?php the_permalink(); ?>" class="text-inherit"><strong><?php the_title(); ?></strong></a>
+										<a href="<?php echo $goodLink; ?>" class="text-inherit"><strong><?php the_title(); ?></strong></a>
 									</p>
 									<p><?php the_content(); ?></p>
 								</div>
@@ -192,7 +198,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="container text-center py-md-4">
 							
 							<form action="https://www.paypal.com/cgi-bin/webscr" id="donate-options-form" method="post" target="_blank">
-								<input type="hidden" name="business" value="donations@kcparkfriends.org">
+								<input type="hidden" name="business" value="Marketing@quincyanimalshelter.org">
 								<input type="hidden" name="cmd" value="_donations">
 								<input type="hidden" name="item_name" value="Voluntary Contribution">
 								<input type="hidden" name="amount" value="50.00" id="donate-options-form-amount">
@@ -222,6 +228,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 						</div>
 					</div>
+
+					<?php
+					global $post;
+					$args = array( 'numberposts' => 3, 'category_name' => 'sponsors' );
+					$posts = get_posts( $args );
+					?>
+					<?php if ( !empty( $posts ) ) : ?>
+						<h2 class="text-center pt-5 pb-2">
+							<a href="#" class="text-inherit">Sponsors</a>
+						</h2>
+						
+						<div class="row justify-content-center pb-5">
+						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+							<?php
+								$goodLink = get_post_meta($post->ID, 'alternateLink', true);
+								if ( empty( $goodLink ) ) {
+									$goodLink = get_the_permalink();
+								}
+							?>
+							<div class="col col-auto text-center">
+								<a href="<?php echo $goodLink; ?>" target="_blank">
+									<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+								</a>
+								<h6 class="mt-0">
+									<a href="<?php echo $goodLink; ?>" target="_blank" class="text-inherit"><?php the_title(); ?></a>
+								</h6>
+							</div>
+						<?php endforeach; ?>
+						</div>
+
+					<?php endif; ?>
 
 				</main><!-- #main -->
 
