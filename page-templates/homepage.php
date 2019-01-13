@@ -78,7 +78,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php
 					global $post;
-					$args = array( 'numberposts' => 4, 'category_name' => 'featured-pets' );
+					$args = array( 'numberposts' => 4, 'category_name' => 'featured-pet' );
 					$posts = get_posts( $args );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
@@ -87,10 +87,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<h2 class="text-center pt-5 pb-4">
 									<a href="#" class="text-inherit">Featured Pets</a>
 								</h2>
-								<div class="row">
+								<div class="row justify-content-center">
 									
 									<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-										<div class="col-sm-6 col-md">
+										<div class="col-sm-6 col-lg-6 col-xl-4">
 											<p>
 												<a href="<?php the_permalink(); ?>">
 													<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>

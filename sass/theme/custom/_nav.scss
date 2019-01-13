@@ -6,6 +6,7 @@
 	width: 4rem;
 	/* width: 6rem; */
 	top: -1.5rem;
+	border: 2px solid $primary;
 
 	@include media-breakpoint-up(md) {
 		width: 5rem; 
