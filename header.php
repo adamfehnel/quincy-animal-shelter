@@ -44,7 +44,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<div class="container">
 			<div class="row justify-content-end py-2">
 				<div class="col col-md-4 col-lg-3 col-xl-2 px-0">
-					<form method="get" id="header-search-form" action="" role="search">
+					<form method="get" id="header-search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>" role="search">
 						<label class="sr-only" for="s">Search</label>
 						<input class="form-control border-0" id="s" name="s" type="text" placeholder="Search …" value="">
 					</form>
