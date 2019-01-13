@@ -191,26 +191,34 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="full-width gray-box mt-5 py-5 dark-blue">
 						<div class="container text-center py-md-4">
 							
+							<form action="https://www.paypal.com/cgi-bin/webscr" id="donate-options-form" method="post" target="_blank">
+								<input type="hidden" name="business" value="donations@kcparkfriends.org">
+								<input type="hidden" name="cmd" value="_donations">
+								<input type="hidden" name="item_name" value="Voluntary Contribution">
+								<input type="hidden" name="amount" value="50.00" id="donate-options-form-amount">
+								<input type="hidden" name="currency_code" value="USD">
+							</form>
+
 							<p class="h2 mb-3">Donate Now!</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt nulla. Praesent ex sem, mattis vel ultrices ut.</p>
-							<div class="row justify-content-center py-3">
+							<div class="row justify-content-center py-3 donate-options">
 								<div class="col-md col-md-auto mb-2 pr-md-0">
-									<a href="#" class="btn btn-block btn-light px-4">$25</a>
+									<a href="#" class="btn btn-block btn-light px-4 donate-option donate-25" data-amount="25.00">$25</a>
 								</div>
 								<div class="col-md col-md-auto mb-2 pr-md-0">
-									<a href="#" class="btn btn-block btn-light px-4">$35</a>
+									<a href="#" class="btn btn-block btn-light px-4 donate-option donate-35" data-amount="35.00">$35</a>
 								</div>
 								<div class="col-md col-md-auto mb-2 pr-md-0">
-									<a href="#" class="btn btn-block btn-primary px-4">$50</a>
+									<a href="#" class="btn btn-block btn-primary px-4 donate-option donate-50" data-amount="50.00">$50</a>
 								</div>
 								<div class="col-md col-md-auto mb-2 pr-md-0">
-									<a href="#" class="btn btn-block btn-light px-4">$150</a>
+									<a href="#" class="btn btn-block btn-light px-4 donate-option donate-150" data-amount="150.00">$150</a>
 								</div>
 								<div class="col-md col-md-auto mb-2 pr-md-0">
-									<a href="#" class="btn btn-block btn-light px-4">Other</a>
+									<a href="#" class="btn btn-block btn-light px-4 donate-option donate-other" data-amount="0.00">Other</a>
 								</div>
 							</div>
-							<a href="#" class="btn btn-danger px-5 py-2">Continue</a>
+							<a href="#" class="btn btn-danger px-5 py-2 donate-options-submit">Continue</a>
 
 						</div>
 					</div>

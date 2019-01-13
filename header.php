@@ -96,6 +96,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 				); ?>
 
 				<a class="btn btn-light btn-sm ml-2 donate-button py-md-2 px-md-3" href="/get-involved/donate/">Donate</a>
+				
+				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" id="donate-button-form" target="_blank">
+					<input type="hidden" name="cmd" value="_s-xclick"></input>
+					<input type="hidden" name="hosted_button_id" value="V33NXQKRUAJE4"></input>
+				</form>
 			<?php if ( 'container' == $container ) : ?>
 			</div><!-- .container -->
 			<?php endif; ?>

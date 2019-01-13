@@ -23,18 +23,42 @@ function toggleDropdown (e) {
   }, e.type === 'mouseleave' ? 25 : 0);
 }
 
-jQuery('body')
-  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-  .on('click', '.dropdown-menu a', toggleDropdown);
+jQuery(function() {
 
-/* not needed, prevents page reload for SO example on menu link clicked */
-jQuery('.dropdown a').on('click tap', function(e){
-	if ( isTouchable ) {
-		$this = jQuery(this);
-		if ( $this.attr('aria-expanded') === "true" ) {
-			location.href = $this.attr('href');
+	jQuery('body')
+	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
+	  .on('click', '.dropdown-menu a', toggleDropdown);
+
+	/* not needed, prevents page reload for SO example on menu link clicked */
+	jQuery('.dropdown a').on('click tap', function(e){
+		if ( isTouchable ) {
+			$this = jQuery(this);
+			if ( $this.attr('aria-expanded') === "true" ) {
+				location.href = $this.attr('href');
+			}
+		} else {
+			location.href = jQuery(this).attr('href');
 		}
-	} else {
-		location.href = jQuery(this).attr('href');
-	}
+	});
+
+	/* Paypal donate button */
+	jQuery('.donate-button').click(function(e){
+		e.preventDefault();
+
+		jQuery('#donate-button-form').submit();
+	});
+
+	/* Paypal donate options */
+	jQuery('.donate-option').click(function(e){
+		e.preventDefault();
+
+		jQuery('.donate-option').removeClass('btn-primary').addClass('btn-light');
+		jQuery(this).addClass('btn-primary').removeClass('btn-light');
+		jQuery('#donate-options-form-amount').attr('value', jQuery(this).data('amount') );
+	});
+	jQuery('.donate-options-submit').click(function(e){
+		e.preventDefault();
+
+		jQuery('#donate-options-form').submit();
+	});
 });
