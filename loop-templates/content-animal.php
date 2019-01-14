@@ -137,7 +137,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<p><a href="/adopt/available-pets/">See all pets</a></p>
 			</div>
 			<div class="col-md-5">
-				<?php echo get_the_post_thumbnail( $post->ID, 'full' ); ?>
+				<?php echo get_the_post_thumbnail( $post->ID, 'full', array( 'class' => 'w-100' ) ); ?>
 
 				<?php 
 				if ( class_exists('Dynamic_Featured_Image') ) {
