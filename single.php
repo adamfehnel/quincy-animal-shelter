@@ -26,7 +26,11 @@ $container   = get_theme_mod( 'understrap_container_type' );
 
 				<?php while ( have_posts() ) : the_post(); ?>
 
-					<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php if ( in_category( 'cats' ) || in_category( 'dogs' ) ) : ?>
+						<?php get_template_part( 'loop-templates/content', 'animal' ); ?>
+					<?php else: ?>
+						<?php get_template_part( 'loop-templates/content', 'single' ); ?>
+					<?php endif; ?>
 
 						<?php /* understrap_post_nav(); */ ?>
 

@@ -31,7 +31,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php
 		wp_link_pages( array(
 			'before' => '<div class="page-links">' . __( 'Pages:', 'understrap' ),
-			'after'  => '</div>',
+			'after'	=> '</div>',
 		) );
 		?>
 
@@ -61,6 +61,63 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endforeach; ?>
 
 			<?php endif; ?>
+
+		<?php endif; ?>
+
+
+		<?php if ( is_page('available-pets') ) : ?>
+			
+			<?php
+			global $post;
+			$args = array( 'numberposts' => 99, 'category_name' => 'available-pets' );
+			$posts = get_posts( $args );
+			?>
+			<?php if ( !empty( $posts ) ) : ?>
+
+				<form class="form-inline" id="filter-pet-form">
+					<span class="text-600 mr-3">Show:</span>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="filter-all" name="pet-filters" class="custom-control-input all" checked>
+						<label class="custom-control-label" for="filter-all">All</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="filter-cats" name="pet-filters" class="custom-control-input cat">
+						<label class="custom-control-label" for="filter-cats">Cats</label>
+					</div>
+					<div class="custom-control custom-radio custom-control-inline">
+						<input type="radio" id="filter-dogs" name="pet-filters" class="custom-control-input dog">
+						<label class="custom-control-label" for="filter-dogs">Dogs</label>
+					</div>
+				</form>
+
+				<div class="row">
+							
+				<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+					
+					<?php
+					$category = "cat";
+					if ( has_category( "dogs", $post ) ) {
+						$category = "dog";
+					}
+					?>
+
+					<div class="col-md-6 col-lg-4 mt-4 filterable <?php echo $category; ?>">
+						<a href="<?php the_permalink(); ?>">
+							<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+						</a>
+						<h4 class="mt-3">
+							<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
+						</h4>
+						<p><?php the_excerpt(); ?></p>
+						<p><a href="<?php the_permalink(); ?>">Read more</a></p>
+					</div>
+
+				<?php endforeach; ?>
+
+				</div>
+
+			<?php endif; ?>
+
 		<?php endif; ?>
 
 	</div><!-- .entry-content -->
