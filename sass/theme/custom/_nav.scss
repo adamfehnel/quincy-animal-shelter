@@ -29,6 +29,17 @@
 		background-color: #EEE;
 	}
 }
+.home .site-logo {
+
+	@include media-breakpoint-up(lg) {
+		width: 7rem; 
+	}
+
+	@include media-breakpoint-up(xl) {
+		width: 9rem;
+	}
+}
+
 
 #wrapper-navbar {
 
