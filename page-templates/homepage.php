@@ -87,10 +87,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<h2 class="text-center pt-5 pb-4">
 									<a href="#" class="text-inherit">Featured Pets</a>
 								</h2>
-								<div class="row justify-content-center">
+								<div class="row justify-content-lg-center">
 									
 									<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-										<div class="col-sm-6 col-lg-6 col-xl-4">
+										<div class="col-sm-6 col-lg-4">
 											<p>
 												<a href="<?php the_permalink(); ?>">
 													<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
@@ -122,10 +122,10 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<a href="#" class="text-inherit">News + Upcoming Events</a>
 						</h2>
 									
-						<div class="row justify-content-center">
+						<div class="row justify-content-lg-center">
 									
 							<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-								<div class="col-sm-6 col-lg-6 col-xl-4">
+								<div class="col-sm-6 col-lg-4">
 									<p>
 										<a href="<?php the_permalink(); ?>">
 											<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
@@ -147,7 +147,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="container">
 							<div class="row justify-content-center">
 								<div class="col col-auto">
-									<form class="form-inline h5 text-300 mb-0 d-block d-md-flex">
+									<form class="form-inline h5 text-300 mb-0 d-block d-md-flex text-center">
 										<div class="mt-3 mt-md-0">Get "The Scoop" About QAS</div>
 										<div class="form-group mx-md-3">
 											<label for="scoop-email" class="sr-only">Email address</label>
