@@ -6523,14 +6523,17 @@ function getUrlVars()
 }
 
 function toggleDropdown (e) {
-	var _d = jQuery(e.target).closest('.dropdown'),
-		_m = jQuery('.dropdown-menu', _d);
-	setTimeout(function(){
-		var shouldOpen = e.type !== 'click' && _d.is(':hover');
-		_m.toggleClass('show', shouldOpen);
-		_d.toggleClass('show', shouldOpen);
-		jQuery('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-	}, e.type === 'mouseleave' ? 25 : 0);
+	if ( jQuery(window).width() >= 768 ) {
+
+		var _d = jQuery(e.target).closest('.dropdown'),
+			_m = jQuery('.dropdown-menu', _d);
+		setTimeout(function(){
+			var shouldOpen = e.type !== 'click' && _d.is(':hover');
+			_m.toggleClass('show', shouldOpen);
+			_d.toggleClass('show', shouldOpen);
+			jQuery('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+		}, e.type === 'mouseleave' ? 25 : 0);
+	}
 }
 
 function filterPets (filter ) {
