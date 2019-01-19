@@ -28,7 +28,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="site-info">
 
-						<div class="row">
+						<div class="row text-center text-md-left">
 							<div class="col-md mb-3 mb-md-0">&copy; 1999-2018 Quincy Animal Shelter.  All rights reserved.</div>
 							<div class="col-md mb-3 mb-md-0 text-center social-icons">
 								<a href="#"><i class="fa fa-envelope"></i></a>
@@ -37,7 +37,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a href="#"><i class="fa fa-youtube-square"></i></a>
 								<a href="#"><i class="fa fa-instagram"></i></a>
 							</div>
-							<div class="col-md mb-3 mb-md-0">Questions about this site? <a href="mailto:webmaster@quincyanimalshelter.org">webmaster@quincyanimalshelter.org</a></div>
+							<div class="col-md">Questions about this site? <a href="mailto:webmaster@quincyanimalshelter.org">webmaster@quincyanimalshelter.org</a></div>
 						</div>
 
 						<?php /*understrap_site_info();*/ ?>
