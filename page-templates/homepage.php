@@ -122,20 +122,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 							<a href="#" class="text-inherit">News + Upcoming Events</a>
 						</h2>
 									
-						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-							<div class="media pb-3">
-								<a href="<?php the_permalink(); ?>" class="mr-3 w-25 d-none d-sm-block">
-									<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
-								</a>
-								<div class="media-body">
-									<h5 class="mt-0">
+						<div class="row justify-content-center">
+									
+							<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+								<div class="col-sm-6 col-lg-6 col-xl-4">
+									<p>
+										<a href="<?php the_permalink(); ?>">
+											<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+										</a>
+									</p>
+									<p class="h5">
 										<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
-									</h5>
+									</p>
 									<p><?php the_excerpt(); ?></p>
 									<p><a href="<?php the_permalink(); ?>">Read more</a></p>
 								</div>
-							</div>
-						<?php endforeach; ?>
+							<?php endforeach; ?> 
+
+						</div>
 
 					<?php endif; ?>
 
@@ -251,7 +255,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 								<a href="<?php echo $goodLink; ?>" target="_blank">
 									<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 								</a>
-								<h6 class="mt-0">
+								<h6 class="pt-2">
 									<a href="<?php echo $goodLink; ?>" target="_blank" class="text-inherit"><?php the_title(); ?></a>
 								</h6>
 							</div>
