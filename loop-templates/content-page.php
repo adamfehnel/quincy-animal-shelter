@@ -59,7 +59,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 			$posts = get_posts( $args );
 			?>
 			<?php if ( !empty( $posts ) ) : ?>
+				
 
+				<a href="/adopt/adopt-a-kitten/" class="float-sm-right mb-4 mb-sm-0 d-inline-block">Looking for a kitten?</a>
 				<form class="form-inline" id="filter-pet-form">
 					<span class="text-600 mr-3">Show:</span>
 					<div class="custom-control custom-radio custom-control-inline">
