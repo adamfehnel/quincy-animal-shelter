@@ -85,7 +85,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="full-width gray-box pb-5 patterned">
 							<div class="container">
 								<h2 class="text-center pt-5 pb-4">
-									<a href="#" class="text-inherit">Featured Pets</a>
+									<a href="/adopt/available-pets/" class="text-inherit">Featured Pets</a>
 								</h2>
 								<div class="row justify-content-lg-center">
 									
@@ -106,7 +106,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								</div>
 								<div class="row justify-content-center pt-4">
-									<a class="btn btn-danger px-5 py-2" href="#">See All Pets</a>
+									<a class="btn btn-danger px-5 py-2" href="/adopt/available-pets/">See All Pets</a>
 								</div>
 							</div>
 						</div>
@@ -119,7 +119,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
 						<h2 class="text-center pt-5 pb-4">
-							<a href="#" class="text-inherit">News + Upcoming Events</a>
+							<a href="/news-events/" class="text-inherit">News + Upcoming Events</a>
 						</h2>
 									
 						<div class="row justify-content-lg-center">
@@ -167,7 +167,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
 						<h2 class="text-center pt-5 pb-4">
-							<a href="#" class="text-inherit">Ways To Help</a>
+							<a href="/get-involved/" class="text-inherit">Ways To Help</a>
 						</h2>
 						<div class="row">
 									
@@ -194,7 +194,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						
 						</div>
 						<div class="row justify-content-center pt-4">
-							<a class="btn btn-primary px-5 py-2" href="#">Join Our Team</a>
+							<a class="btn btn-primary px-5 py-2" href="/get-involved/volunteering/">Join Our Team</a>
 						</div>
 					<?php endif; ?>
 
@@ -240,7 +240,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
 						<h2 class="text-center pt-5 pb-2">
-							<a href="#" class="text-inherit">Sponsors</a>
+							<a href="/get-involved/become-a-sponsor/" class="text-inherit">Sponsors</a>
 						</h2>
 						
 						<div class="row justify-content-center pb-5">
