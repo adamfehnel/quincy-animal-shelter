@@ -25,6 +25,25 @@ $container = get_theme_mod( 'understrap_container_type' );
 			<div class="col-md-12">
 
 				<footer class="site-footer" id="colophon">
+					
+					<div class="row justify-content-between mb-4 mb-sm-0">
+						<?php
+						$adoptionInfo = get_page_by_title('Adoption Hours', OBJECT, 'post');
+						if ( isset( $adoptionInfo ) ) :
+						?>
+						<div class="col-sm-6 col-md-4 col-lg-3 mb-4">
+							<p><strong>Adoption Hours:</strong></p>
+							<?php echo $adoptionInfo->post_content; ?>
+						</div>
+						<?php endif; ?>
+
+						<div class="col-sm-6 col-md-8 col-lg-7">
+							<p><strong>Quincy Animal Shelter</strong> is a non-profit organization under section 501(c)(3) of the Internal Revenue Code and a recognized Massachusetts charity.</p>
+							<p>Your donation to QAS may qualify for an income tax deduction in accordance with Federal and/or State income tax laws. Please consult with your tax advisor to determine whether your donation is tax deductible in whole or in part.</p>
+						</div>
+					</div>
+					
+					<hr>
 
 					<div class="site-info">
 
