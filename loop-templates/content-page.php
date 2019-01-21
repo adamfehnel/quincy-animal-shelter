@@ -25,8 +25,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="entry-content">
 
 		<?php if ( is_page('news-events') ) : ?>
-			<h3 class="pt-4 pb-4">Event posts</h3>
+			
+			<?php the_content(); ?>
 
+			<h3 class="pt-4 pb-4">Event posts</h3>
+			
 			<?php
 			global $post;
 			$args = array( 'numberposts' => 3, 'category_name' => 'events' );
