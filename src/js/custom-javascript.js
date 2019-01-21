@@ -121,4 +121,10 @@ jQuery(function() {
 	if ( typeof filter !== "undefined" ) {
 		filterPets( filter );
 	}
+
+	jQuery('#submit-sponsor-pet-form').click(function(e){
+		e.preventDefault();
+
+		jQuery('#donate-sponsor-pet-form').submit();
+	});
 });
