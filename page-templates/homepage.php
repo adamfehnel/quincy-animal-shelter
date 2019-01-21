@@ -32,11 +32,15 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<?php $carouselCount++; ?>
 				<?php endforeach; ?>
 			</ol>
-			<div class="carousel-inner">		
+			<div class="carousel-inner parallax-wrapper">
 			<?php $carouselCount = 0; ?>
 			<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
 				<div class="carousel-item <?php if ($carouselCount == 0) { echo 'active'; } ?>">
-					<?php the_post_thumbnail( 'full', ['class' => 'w-100'] ); ?>
+
+					<div class="block">
+  						<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>" data-speed="-1" class="img-parallax">
+					</div>
+					
 				</div>
 				<?php $carouselCount++; ?>
 			<?php endforeach; ?>
