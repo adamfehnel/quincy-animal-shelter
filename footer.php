@@ -48,7 +48,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 					<div class="site-info">
 
 						<div class="row text-center text-md-left">
-							<div class="col-md mb-3 mb-md-0">&copy; 1999-2018 Quincy Animal Shelter.  All rights reserved.</div>
+							<div class="col-md mb-3 mb-md-0">&copy; 1999-<?php echo date("Y"); ?> Quincy Animal Shelter.  All rights reserved.</div>
 							<div class="col-md mb-3 mb-md-0 text-center social-icons">
 								<a href="mailto:info@quincyanimalshelter.org"><i class="fa fa-envelope"></i></a>
 								<a href="https://www.facebook.com/QuincyAnimalShelter.org/" target="_blank"><i class="fa fa-facebook-square"></i></a>
