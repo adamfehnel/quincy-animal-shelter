@@ -36,7 +36,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 				<div class="col-md-5">
 
-					<a href="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" target="_blank">
+					<a href="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
 						<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'w-100' ) ); ?>
 					</a>
 
@@ -48,7 +48,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<div class="row">
 						<?php foreach( $additional_featured_images as $additional_featured_image ): ?>
 							<div class="col-6 mt-4">
-								<a href="<?php echo $additional_featured_image['full'] ?>" target="_blank">
+								<a href="<?php echo $additional_featured_image['full'] ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
 									<img src="<?php echo $additional_featured_image['thumb'] ?>" alt="" class="w-100">
 								</a>
 							</div>
