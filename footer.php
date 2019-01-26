@@ -50,11 +50,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="row text-center text-md-left">
 							<div class="col-md mb-3 mb-md-0">&copy; 1999-2018 Quincy Animal Shelter.  All rights reserved.</div>
 							<div class="col-md mb-3 mb-md-0 text-center social-icons">
-								<a href="#"><i class="fa fa-envelope"></i></a>
-								<a href="#"><i class="fa fa-facebook-square"></i></a>
-								<a href="#"><i class="fa fa-twitter-square"></i></a>
-								<a href="#"><i class="fa fa-youtube-square"></i></a>
-								<a href="#"><i class="fa fa-instagram"></i></a>
+								<a href="mailto:info@quincyanimalshelter.org"><i class="fa fa-envelope"></i></a>
+								<a href="https://www.facebook.com/QuincyAnimalShelter.org/" target="_blank"><i class="fa fa-facebook-square"></i></a>
+								<a href="https://twitter.com/qasquincy" target="_blank"><i class="fa fa-twitter-square"></i></a>
+								<a href="https://www.youtube.com/user/QuincyAnimalShelter1" target="_blank"><i class="fa fa-youtube-square"></i></a>
+								<a href="https://www.instagram.com/quincyanimalshelter/" target="_blank"><i class="fa fa-instagram"></i></a>
 							</div>
 							<div class="col-md">Questions about this site? <a href="mailto:webmaster@quincyanimalshelter.org">webmaster@quincyanimalshelter.org</a></div>
 						</div>
