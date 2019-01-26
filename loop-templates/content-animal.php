@@ -150,7 +150,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<input type="hidden" name="currency_code" value="USD">
 				</form>
 
-				<?php echo get_the_post_thumbnail( $post->ID, 'full', array( 'class' => 'w-100' ) ); ?>
+				<a href="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" target="_blank">
+					<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'w-100' ) ); ?>
+				</a>
 
 				<?php 
 				if ( class_exists('Dynamic_Featured_Image') ) {
