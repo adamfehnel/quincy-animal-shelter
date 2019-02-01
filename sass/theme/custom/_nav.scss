@@ -3,18 +3,23 @@
 	z-index: 10;
 	background-color: white;
 	padding: 0.8rem;
-	width: 4rem;
-	/* width: 6rem; */
-	top: -1.5rem;
+	width: 7rem;
+	top: -1.2rem;
 	border: 2px solid $primary;
 
 	@include media-breakpoint-up(md) {
-		width: 5rem; 
+		width: 5rem;
+		top: -0.68rem;
 	}
 
 	@include media-breakpoint-up(lg) {
-		 width: 7rem; 
-		// width: 12rem;
+		width: 9rem; 
+		padding: 1rem;
+		top: -1.6rem;
+	}
+
+	@include media-breakpoint-up(xl) {
+		width: 13rem; 
 		padding: 1rem;
 		top: -2.5rem;
 	}
@@ -25,18 +30,8 @@
 		transform: translateX(-50%)
 	}
 
-	&:hover {
-		background-color: #EEE;
-	}
-}
-.home .site-logo {
-
-	@include media-breakpoint-up(lg) {
-		width: 7rem; 
-	}
-
-	@include media-breakpoint-up(xl) {
-		width: 9rem;
+	img {
+		width: 100%;
 	}
 }
 

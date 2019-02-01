@@ -64,34 +64,12 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<nav class="navbar navbar-expand-md navbar-dark bg-primary">
 
 		<?php if ( 'container' == $container ) : ?>
-			<div class="container position-relative" >
+			<div class="container position-relative">
 		<?php endif; ?>
 
-					<!-- Your site title as branding in the menu -->
-					<?php if ( ! has_custom_logo() ) { ?>
-
-						<?php if ( is_front_page() && is_home() ) : ?>
-
-							<h1 class="navbar-brand mb-0">
-								<a class="site-logo" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-									img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo">
-									<!-- <<img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo"> -->
-								</a>
-							</h1>
-
-						<?php else : ?>
-
-							<a class="site-logo navbar-brand" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-								<img src="<?php bloginfo('template_url')?>/img/logo.jpg" alt="Quincy Animal Shelter logo"> 
-								<!-- <img src="<?php bloginfo('template_url')?>/img/bad-logo.png" alt="Quincy Animal Shelter logo">-->
-							</a>
-
-						<?php endif; ?>
-
-
-					<?php } else {
-						the_custom_logo();
-					} ?><!-- end custom logo -->
+				<a class="site-logo navbar-brand mr-0" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
+					<img src="<?php bloginfo('template_url')?>/img/logo.svg" alt="Quincy Animal Shelter logo" onerror="this.src=<?php bloginfo('template_url')?>/img/logo.png; this.onerror=null;">
+				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
 					<i class="fa fa-bars"></i>
