@@ -6523,17 +6523,14 @@ function getUrlVars()
 }
 
 function toggleDropdown (e) {
-	if ( jQuery(window).width() >= 768 ) {
-
-		var _d = jQuery(e.target).closest('.dropdown'),
-			_m = jQuery('.dropdown-menu', _d);
-		setTimeout(function(){
-			var shouldOpen = e.type !== 'click' && _d.is(':hover');
-			_m.toggleClass('show', shouldOpen);
-			_d.toggleClass('show', shouldOpen);
-			jQuery('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
-		}, e.type === 'mouseleave' ? 25 : 0);
-	}
+  var _d = jQuery(e.target).closest('.dropdown'),
+      _m = jQuery('.dropdown-menu', _d);
+  setTimeout(function(){
+    var shouldOpen = e.type !== 'click' && _d.is(':hover');
+    _m.toggleClass('show', shouldOpen);
+    _d.toggleClass('show', shouldOpen);
+    jQuery('[data-toggle="dropdown"]', _d).attr('aria-expanded', shouldOpen);
+  }, e.type === 'mouseleave' ? 25 : 0);
 }
 
 function filterPets (filter ) {
@@ -6557,17 +6554,28 @@ function filterPets (filter ) {
 jQuery(function() {
 
 	jQuery('body')
-	  .on('mouseenter mouseleave','.dropdown',toggleDropdown)
-	  .on('click', '.dropdown-menu a', toggleDropdown);
+		.on('mouseenter mouseleave','.dropdown',toggleDropdown)
+		.on('click', '.dropdown-menu a', toggleDropdown);
 
-	/* not needed, prevents page reload for SO example on menu link clicked */
-	jQuery('.dropdown a').on('click tap', function(e){
+	jQuery('.dropdown > a').on('touchstart', function(e){
+		e.preventDefault();
+		console.log(isTouchable)
 		if ( isTouchable ) {
 			$this = jQuery(this);
 			if ( $this.attr('aria-expanded') === "true" ) {
 				location.href = $this.attr('href');
+			} else {
+				$this.click();
 			}
 		} else {
+			location.href = jQuery(this).attr('href');
+		}
+	});
+
+	jQuery('.dropdown > a').on('click', function(e){
+		e.preventDefault();
+
+		if ( isTouchable ) {} else {
 			location.href = jQuery(this).attr('href');
 		}
 	});

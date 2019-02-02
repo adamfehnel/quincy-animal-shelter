@@ -1,7 +1,12 @@
 h1.entry-title {
 
 	@include media-breakpoint-up(md) {
-		margin-top: 5rem;
+		margin-top: 1rem;
+		padding-bottom: 1rem;
+	}
+
+	@include media-breakpoint-up(lg) {
+		margin-top: 4rem;
 		padding-bottom: 1.5rem;
 	}
 }

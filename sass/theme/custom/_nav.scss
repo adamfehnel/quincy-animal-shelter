@@ -9,7 +9,8 @@
 
 	@include media-breakpoint-up(md) {
 		width: 5rem;
-		top: -0.68rem;
+		padding: 0.2em;
+		top: -0.2rem;
 	}
 
 	@include media-breakpoint-up(lg) {
@@ -19,8 +20,7 @@
 	}
 
 	@include media-breakpoint-up(xl) {
-		width: 13rem; 
-		padding: 1rem;
+		width: 13rem;
 		top: -2.5rem;
 	}
 
@@ -33,6 +33,10 @@
 	img {
 		width: 100%;
 	}
+}
+
+.dropdown-toggle.nav-link:focus {
+	outline: none;
 }
 
 
