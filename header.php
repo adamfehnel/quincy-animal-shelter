@@ -40,6 +40,24 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 <div class="hfeed site d-flex flex-column" id="page">
 
+	<?php
+	$emergencyAlert = get_page_by_title('Alert', OBJECT, 'page');
+
+	if ( isset( $emergencyAlert ) ) :
+	?>
+
+	<div class="alert alert-danger px-0 mb-0">
+		<div class="container" role="alert">
+			<div class="row">
+				<div class="col-sm col-sm-auto mb-2 mb-sm-0"><strong><i class="fa fa-exclamation-triangle mr-1"></i> ALERT</strong></div>
+				<div class="col-sm">
+					<?php echo $emergencyAlert->post_content; ?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<?php endif; ?>
+
 	<div id="search-button-wrapper">
 		<div class="container">
 			<div class="row justify-content-end py-2">

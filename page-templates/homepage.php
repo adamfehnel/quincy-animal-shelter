@@ -226,11 +226,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$posts = get_posts( $args );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
-						<h2 class="text-center pt-5 pb-2">
+						<!-- <h2 class="text-center pt-5 pb-2">
 							<a href="/get-involved/become-a-sponsor/" class="text-inherit">Sponsors</a>
-						</h2>
+						</h2> -->
 						
-						<div class="row justify-content-center pb-5">
+						<div class="row justify-content-center mt-5 pb-5">
 						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
 							<?php
 								$goodLink = get_post_meta($post->ID, 'alternateLink', true);

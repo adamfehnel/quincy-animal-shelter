@@ -1,4 +1,9 @@
 h1.entry-title {
+	
+	@include media-breakpoint-down(sm) {
+		font-size: 2em;
+		line-height: 1.4;
+	}
 
 	@include media-breakpoint-up(md) {
 		margin-top: 1rem;
