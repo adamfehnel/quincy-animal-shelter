@@ -23,21 +23,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<div class="row">
 			<div class="col-md-7">
 				<?php
-					$ageCategory = get_post_meta($post->ID, 'ageCategory', true);
-					$gender = get_post_meta($post->ID, 'gender', true);
-					$sizeCategory = get_post_meta($post->ID, 'sizeCategory', true);
-					$breed = get_post_meta($post->ID, 'breed', true);
-					$age = get_post_meta($post->ID, 'age', true);
-					$coatLength = get_post_meta($post->ID, 'coatLength', true);
-					$color = get_post_meta($post->ID, 'color', true);
-					$health = get_post_meta($post->ID, 'health', true);
-					$houseTrained = get_post_meta($post->ID, 'houseTrained', true);
-					$note = get_post_meta($post->ID, 'note', true);
-					$animalID = get_post_meta($post->ID, 'animalID', true);
-					$declawed = get_post_meta($post->ID, 'declawed', true);
-					$location = get_post_meta($post->ID, 'location', true);
-					$intakeDate = get_post_meta($post->ID, 'intakeDate', true);
-					$arn = get_post_meta($post->ID, 'arn', true);
+					$ageCategory	= get_post_meta($post->ID, 'ageCategory', true);
+					$gender			= get_post_meta($post->ID, 'gender', true);
+					$sizeCategory	= get_post_meta($post->ID, 'sizeCategory', true);
+					$breed			= get_post_meta($post->ID, 'breed', true);
+					$age			= get_post_meta($post->ID, 'age', true);
+					$coatLength		= get_post_meta($post->ID, 'coatLength', true);
+					$color			= get_post_meta($post->ID, 'color', true);
+					$health			= get_post_meta($post->ID, 'health', true);
+					$houseTrained	= get_post_meta($post->ID, 'houseTrained', true);
+					$note			= get_post_meta($post->ID, 'note', true);
+					$animalID		= get_post_meta($post->ID, 'animalID', true);
+					$declawed		= get_post_meta($post->ID, 'declawed', true);
+					$location		= get_post_meta($post->ID, 'location', true);
+					$intakeDate		= get_post_meta($post->ID, 'intakeDate', true);
+					$arn			= get_post_meta($post->ID, 'arn', true);
+					$petPointImage1	= get_post_meta($post->ID, 'petPointImage1', true);
+					$petPointImage2	= get_post_meta($post->ID, 'petPointImage2', true);
+					$petPointImage3	= get_post_meta($post->ID, 'petPointImage3', true);
 				?>
 
 				<div class="pet-meta pb-3">
@@ -150,27 +153,61 @@ if ( ! defined( 'ABSPATH' ) ) {
 					<input type="hidden" name="currency_code" value="USD">
 				</form>
 
-				<a href="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
-					<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'w-100' ) ); ?>
-				</a>
-
 				<?php 
-				if ( class_exists('Dynamic_Featured_Image') ) {
-					global $dynamic_featured_image;
-					$additional_featured_images = $dynamic_featured_image->get_featured_images( );
-					?>
-					<div class="row">
-					<?php foreach( $additional_featured_images as $additional_featured_image ): ?>
+				$firstPetPointImageShown = false;
+				if ( has_post_thumbnail() ) : ?>
+					<a href="<?php echo get_the_post_thumbnail_url( $post->ID, 'full' ); ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
+						<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'w-100' ) ); ?>
+					</a>
+				<?php elseif ( !empty($petPointImage1) ) :
+					$firstPetPointImageShown = true;
+				?>
+					<a href="<?php echo $petPointImage1; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
+						<?php echo get_the_post_thumbnail( $post->ID, 'large', array( 'class' => 'w-100' ) ); ?>
+						<img src="<?php echo $petPointImage1; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+					</a>
+				<?php endif; ?>
+
+				<div class="row">
+					<?php 
+					if ( class_exists('Dynamic_Featured_Image') ) {
+						global $dynamic_featured_image;
+						$additional_featured_images = $dynamic_featured_image->get_featured_images( );
+						?>
+						<?php foreach( $additional_featured_images as $additional_featured_image ): ?>
+							<div class="col-6 mt-4">
+								<a href="<?php echo $additional_featured_image['full'] ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
+									<img src="<?php echo $additional_featured_image['thumb'] ?>" alt="" class="w-100">
+								</a>
+							</div>
+						<?php endforeach; ?>
+					<?php } ?>
+					
+					<?php if ( !empty($petPointImage1) && !$firstPetPointImageShown ) : ?>
 						<div class="col-6 mt-4">
-							<a href="<?php echo $additional_featured_image['full'] ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>">
-								<img src="<?php echo $additional_featured_image['thumb'] ?>" alt="" class="w-100">
+							<a href="<?php echo $petPointImage1; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>" class="square-thumb">
+								<img src="<?php echo $petPointImage1; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
 							</a>
 						</div>
-					<?php endforeach; ?>
-					</div>
-				<?php
-				}
-				?>
+					<?php endif; ?>
+					
+					<?php if ( !empty($petPointImage2) ) : ?>
+						<div class="col-6 mt-4">
+							<a href="<?php echo $petPointImage2; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>" class="square-thumb">
+								<img src="<?php echo $petPointImage2; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+							</a>
+						</div>
+					<?php endif; ?>
+					
+					<?php if ( !empty($petPointImage3) ) : ?>
+						<div class="col-6 mt-4">
+							<a href="<?php echo $petPointImage3; ?>" data-toggle="lightbox" data-gallery="gallery-<?php echo $post->ID; ?>" class="square-thumb">
+								<img src="<?php echo $petPointImage3; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+							</a>
+						</div>
+					<?php endif; ?>
+
+				</div>
 			</div>
 		</div>
 

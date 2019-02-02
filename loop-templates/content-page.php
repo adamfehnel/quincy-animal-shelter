@@ -54,18 +54,20 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-		<?php elseif ( is_page('available-pets') ) : ?>
+		<?php elseif ( is_page('available-dogs') ) : ?>
 			
+			<?php the_content(); ?>
+
 			<?php
 			global $post;
-			$args = array( 'numberposts' => 99, 'category_name' => 'available-pets' );
+			$args = array( 'numberposts' => 99, 'category_name' => 'dogs' );
 			$posts = get_posts( $args );
 			?>
 			<?php if ( !empty( $posts ) ) : ?>
 				
 
-				<a href="/adopt/adopt-a-kitten/" class="float-sm-right mb-4 mb-sm-0 d-inline-block">Looking for a kitten?</a>
-				<form class="form-inline" id="filter-pet-form">
+				<!-- <a href="/adopt/adopt-a-kitten/" class="float-sm-right mb-4 mb-sm-0 d-inline-block">Looking for a kitten?</a> -->
+				<!-- <form class="form-inline" id="filter-pet-form">
 					<span class="text-600 mr-3">Show:</span>
 					<div class="custom-control custom-radio custom-control-inline">
 						<input type="radio" id="filter-all" name="pet-filters" class="custom-control-input all" checked>
@@ -79,7 +81,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<input type="radio" id="filter-dogs" name="pet-filters" class="custom-control-input dog">
 						<label class="custom-control-label" for="filter-dogs">Dogs</label>
 					</div>
-				</form>
+				</form> -->
 
 				<div class="row">
 							
@@ -93,9 +95,17 @@ if ( ! defined( 'ABSPATH' ) ) {
 					?>
 
 					<div class="col-md-6 col-lg-4 mt-4 filterable <?php echo $category; ?>">
-						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
-						</a>
+						<?php
+						$petPointImage = get_post_meta($post->ID, 'petPointImage1', true);
+						if ( has_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+							</a>
+						<?php elseif ( !empty($petPointImage) ) : ?>
+							<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo $petPointImage; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+							</a>
+						<?php endif; ?>
 						<h4 class="mt-3">
 							<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
 						</h4>
@@ -108,6 +118,56 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</div>
 
 			<?php endif; ?>
+
+		<?php elseif ( is_page('available-cats') ) : ?>
+			
+			<?php the_content(); ?>
+
+			<?php
+			global $post;
+			$args = array( 'numberposts' => 99, 'category_name' => 'cats' );
+			$posts = get_posts( $args );
+			?>
+			<?php if ( !empty( $posts ) ) : ?>
+				
+				
+				<div class="row">
+							
+				<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+					
+					<?php
+					$category = "cat";
+					if ( has_category( "dogs", $post ) ) {
+						$category = "dog";
+					}
+					?>
+
+					<div class="col-md-6 col-lg-4 mt-4 filterable <?php echo $category; ?>">
+						<?php
+						$petPointImage = get_post_meta($post->ID, 'petPointImage1', true);
+						if ( has_post_thumbnail() ) : ?>
+							<a href="<?php the_permalink(); ?>">
+								<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+							</a>
+						<?php elseif ( !empty($petPointImage) ) : ?>
+							<a href="<?php the_permalink(); ?>">
+								<img src="<?php echo $petPointImage; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
+							</a>
+						<?php endif; ?>
+						<h4 class="mt-3">
+							<a href="<?php the_permalink(); ?>" class="text-inherit"><?php the_title(); ?></a>
+						</h4>
+						<p><?php the_excerpt(); ?></p>
+						<p><a href="<?php the_permalink(); ?>">Read more</a></p>
+					</div>
+
+				<?php endforeach; ?>
+
+				</div>
+
+			<?php endif; ?>
+
+			<div class="mt-5 text-center"><a href="/adopt/adopt-a-kitten/" class="btn btn-danger btn-sm px-3 py-2">Looking for a kitten?</a></div>
 
 		<?php else: ?>
 

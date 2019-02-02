@@ -97,7 +97,16 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<div class="col-sm-6 col-lg-4">
 											<p>
 												<a href="<?php the_permalink(); ?>">
-													<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+													<?php 
+														if ( has_post_thumbnail() ) {
+															the_post_thumbnail( 'medium', ['class' => 'w-100'] );
+														} else {
+															$petPointImage = get_post_meta($post->ID, 'petPointImage1', true);
+															if ( !empty( $petPointImage ) ) {
+																echo "<img src='". $petPointImage . "' alt=". get_the_title() ." class='w-100'>";
+															}
+														}
+													?>
 												</a>
 											</p>
 											<p class="h5">
