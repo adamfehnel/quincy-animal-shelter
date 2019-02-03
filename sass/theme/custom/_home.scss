@@ -1,9 +1,8 @@
 #home-carousel {
 
-	/* img {
-		max-height: 20rem;
-		object-fit: cover;
-	} */
+	.carousel-message {
+		color: #FFF;
+	}
 
 	.carousel-info {
 
@@ -13,8 +12,7 @@
 			left: 0;
 			width: 100%;
 			z-index: 5;
-
-
+			pointer-events: none;
 		}
 	}
 

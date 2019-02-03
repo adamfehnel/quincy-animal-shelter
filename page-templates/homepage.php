@@ -39,6 +39,11 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<div class="block">
   						<img src="<?php echo get_the_post_thumbnail_url($post->ID, 'full'); ?>" data-speed="-1" class="img-parallax">
+  						<div class="container carousel-message h-100 d-flex align-items-center">
+  							<div class="carousel-message-inner">
+  								<?php the_content(); ?>
+  							</div>
+  						</div>
 					</div>
 					
 				</div>
