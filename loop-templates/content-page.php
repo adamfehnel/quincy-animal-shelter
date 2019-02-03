@@ -54,7 +54,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-		<?php elseif ( is_page('available-dogs') ) : ?>
+		<?php elseif ( is_page('adopt-a-dog') ) : ?>
 			
 			<?php the_content(); ?>
 
@@ -65,7 +65,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 			<?php if ( !empty( $posts ) ) : ?>
 				
-
 				<!-- <a href="/adopt/adopt-a-kitten/" class="float-sm-right mb-4 mb-sm-0 d-inline-block">Looking for a kitten?</a> -->
 				<!-- <form class="form-inline" id="filter-pet-form">
 					<span class="text-600 mr-3">Show:</span>
@@ -119,7 +118,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 			<?php endif; ?>
 
-		<?php elseif ( is_page('available-cats') ) : ?>
+		<?php elseif ( is_page('adopt-a-cat') ) : ?>
 			
 			<?php the_content(); ?>
 

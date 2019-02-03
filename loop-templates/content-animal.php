@@ -138,7 +138,13 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				<hr>
 
-				<p><a href="/adopt/available-pets/">&laquo; &nbsp;See all available pets</a></p>
+				<p>
+					<?php if (in_category('dogs')) : ?>
+						<a href="/adopt/adopt-a-dog/">&laquo; &nbsp;See all available dogs</a>
+					<?php else : ?>
+						<a href="/adopt/adopt-a-cat/">&laquo; &nbsp;See all available cats</a>
+					<?php endif; ?>
+				</p>
 			</div>
 			<div class="col-md-5">
 
