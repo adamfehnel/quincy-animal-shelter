@@ -124,7 +124,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 								</div>
 								<div class="row justify-content-center pt-4">
-									<a class="btn btn-danger px-5 py-2" href="/adopt/available-pets/">See All Pets</a>
+									<a class="btn btn-danger px-5 py-2" href="/adopt/">Adopt a Pet</a>
 								</div>
 							</div>
 						</div>
