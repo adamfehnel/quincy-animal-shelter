@@ -211,7 +211,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 							</form>
 
 							<p class="h2 mb-3">Donate Now!</p>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec tincidunt nulla. Praesent ex sem, mattis vel ultrices ut.</p>
+							<p>Your tax-deductible donation can continue to support QAS mission, goals, and objectives.</p>
 							<div class="row justify-content-center py-3 donate-options">
 								<div class="col-md col-md-auto mb-2 pr-md-0">
 									<a href="#" class="btn btn-block btn-light px-4 donate-option donate-25" data-amount="25.00">$25</a>
