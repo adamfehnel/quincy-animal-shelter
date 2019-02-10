@@ -101,7 +101,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
 										<div class="col-sm-6 col-lg-4">
 											<p>
-												<a href="<?php the_permalink(); ?>">
+												<a href="<?php the_permalink(); ?>" class="square-thumb">
 													<?php 
 														if ( has_post_thumbnail() ) {
 															the_post_thumbnail( 'medium', ['class' => 'w-100'] );
