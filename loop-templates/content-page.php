@@ -65,23 +65,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			?>
 			<?php if ( !empty( $posts ) ) : ?>
 				
-				<!-- <a href="/adopt/adopt-a-kitten/" class="float-sm-right mb-4 mb-sm-0 d-inline-block">Looking for a kitten?</a> -->
-				<!-- <form class="form-inline" id="filter-pet-form">
-					<span class="text-600 mr-3">Show:</span>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="filter-all" name="pet-filters" class="custom-control-input all" checked>
-						<label class="custom-control-label" for="filter-all">All</label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="filter-cats" name="pet-filters" class="custom-control-input cat">
-						<label class="custom-control-label" for="filter-cats">Cats</label>
-					</div>
-					<div class="custom-control custom-radio custom-control-inline">
-						<input type="radio" id="filter-dogs" name="pet-filters" class="custom-control-input dog">
-						<label class="custom-control-label" for="filter-dogs">Dogs</label>
-					</div>
-				</form> -->
-
 				<div class="row">
 							
 				<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
@@ -97,11 +80,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 						$petPointImage = get_post_meta($post->ID, 'petPointImage1', true);
 						if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" class="square-thumb">
 								<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 							</a>
 						<?php elseif ( !empty($petPointImage) ) : ?>
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" class="square-thumb">
 								<img src="<?php echo $petPointImage; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
 							</a>
 						<?php endif; ?>
@@ -145,11 +128,11 @@ if ( ! defined( 'ABSPATH' ) ) {
 						<?php
 						$petPointImage = get_post_meta($post->ID, 'petPointImage1', true);
 						if ( has_post_thumbnail() ) : ?>
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" class="square-thumb">
 								<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
 							</a>
 						<?php elseif ( !empty($petPointImage) ) : ?>
-							<a href="<?php the_permalink(); ?>">
+							<a href="<?php the_permalink(); ?>" class="square-thumb">
 								<img src="<?php echo $petPointImage; ?>" alt="<?php echo get_the_title(); ?>" class="w-100">
 							</a>
 						<?php endif; ?>
