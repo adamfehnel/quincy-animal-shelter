@@ -16,4 +16,12 @@
 		}
 	}
 
+	.display-4 {
+		font-size: calc(0.7rem + 3vw);
+
+		@include media-breakpoint-up(xl) {
+			font-size: 3rem;
+		}
+	}
+
 } 
