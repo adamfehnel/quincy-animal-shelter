@@ -152,7 +152,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<a href="#" id="submit-sponsor-pet-form" class="btn btn-block py-2 btn-light mb-4">Sponsor <?php echo get_the_title(); ?></a>
 
 				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="donate-sponsor-pet-form">
-					<input type="hidden" name="business" value="Marketing@quincyanimalshelter.org">
+					<input type="hidden" name="business" value="qasadopt@msn.com">
 					<input type="hidden" name="cmd" value="_donations">
 					<input type="hidden" name="item_name" value="Sponsor a pet">
 					<input type="hidden" name="item_number" value="<?php echo get_the_title(); ?>">

@@ -203,7 +203,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 						<div class="container text-center py-md-4">
 							
 							<form action="https://www.paypal.com/cgi-bin/webscr" id="donate-options-form" method="post" target="_blank">
-								<input type="hidden" name="business" value="Marketing@quincyanimalshelter.org">
+								<input type="hidden" name="business" value="qasadopt@msn.com">
 								<input type="hidden" name="cmd" value="_donations">
 								<input type="hidden" name="item_name" value="Voluntary Contribution">
 								<input type="hidden" name="amount" value="50.00" id="donate-options-form-amount">
