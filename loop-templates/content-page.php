@@ -27,15 +27,15 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<?php if ( is_page('news-events') ) : ?>
 			
 			<?php the_content(); ?>
-
-			<h3 class="pt-4 pb-4">Event posts</h3>
 			
 			<?php
 			global $post;
-			$args = array( 'numberposts' => 3, 'category_name' => 'events' );
+			$args = array( 'numberposts' => 3, 'category_name' => 'prior-events' );
 			$posts = get_posts( $args );
 			?>
 			<?php if ( !empty( $posts ) ) : ?>
+
+				<h3 class="pt-4 pb-4">Prior Events</h3>
 							
 				<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
 					<div class="media pb-3">
