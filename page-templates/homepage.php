@@ -128,6 +128,45 @@ $container = get_theme_mod( 'understrap_container_type' );
 								</div>
 							</div>
 						</div>
+					<?php else: ?>
+						<?php
+						$args = array( 'numberposts' => 3, 'category_name' => 'success-stories' );
+						$posts = get_posts( $args );
+						?>
+							<?php if ( !empty( $posts ) ) : ?>
+							<div class="full-width gray-box pb-5 patterned">
+								<div class="container">
+									<h2 class="text-center pt-5 pb-4">
+										<a href="/category/success-stories/" class="text-inherit">Success Stories</a>
+									</h2>
+									<div class="row justify-content-lg-center">
+										
+										<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+											<div class="col-sm-6 col-lg-4">
+												<p>
+													<a href="/category/success-stories/" class="square-thumb">
+														<?php 
+															if ( has_post_thumbnail() ) {
+																the_post_thumbnail( 'medium', ['class' => 'w-100'] );
+															}
+														?>
+													</a>
+												</p>
+												<p class="h5">
+													<a href="/category/success-stories/" class="text-inherit"><?php the_title(); ?></a>
+												</p>
+												<p><?php the_excerpt(); ?></p>
+												<p><a href="/category/success-stories/">Read more</a></p>
+											</div>
+										<?php endforeach; ?> 
+
+									</div>
+									<div class="row justify-content-center pt-4">
+										<a class="btn btn-danger px-5 py-2" href="/category/success-stories/">More Success Stories</a>
+									</div>
+								</div>
+							</div>
+						<?php endif; ?>
 					<?php endif; ?>
 
 					<!-- <?php
