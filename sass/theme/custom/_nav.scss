@@ -3,35 +3,38 @@
 	z-index: 10;
 	background-color: white;
 	padding: 0.8rem;
-	width: 7rem;
-	top: -1.2rem;
+	width: 3.5rem;
+	top: -1.4rem;
 	border: 2px solid $primary;
 
-	@include media-breakpoint-up(md) {
+	@include media-breakpoint-up( sm ) {
+		width: 4rem;
+	}
+
+	@include media-breakpoint-up( md ) {
 		width: 5rem;
-		padding: 0.2em;
-		top: -0.2rem;
+		padding: 0.6em;
+		top: -2rem;
 		box-shadow: 0 1px 2px rgba(0,0,0,0.1);
 		transition: all 0.2s ease-in-out;
 
 		&:hover {
 			transform: scale(1.05);
-			box-shadow: 0 5px 15px rgba(0,0,0,0.18);
 		}
 	}
 
-	@include media-breakpoint-up(lg) {
-		width: 9rem; 
+	@include media-breakpoint-up( lg ) {
+		width: 6rem; 
 		padding: 1rem;
-		top: -1.6rem;
+		top: -2.4rem;
 	}
 
-	@include media-breakpoint-up(xl) {
-		width: 13rem;
-		top: -2.5rem;
+	@include media-breakpoint-up( xl ) {
+		width: 7rem;
+		top: -2.8rem;
 	}
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down( sm ) {
 		left: 50%;
 		-webkit-transform: translateX(-50%);
 		transform: translateX(-50%)
@@ -48,7 +51,7 @@
 
 ul.dropdown-menu {
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down( sm ) {
 		border: 0;
 	}
 }
@@ -83,7 +86,7 @@ ul.dropdown-menu {
 
 .donate-button {
 
-	@include media-breakpoint-down(sm) {
+	@include media-breakpoint-down( sm ) {
 		position: absolute;
 		right: 0;
 		top: -2px;

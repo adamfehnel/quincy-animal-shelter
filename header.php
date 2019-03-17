@@ -93,7 +93,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 		<?php endif; ?>
 
 				<a class="site-logo navbar-brand mr-0" rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" itemprop="url">
-					<img src="<?php bloginfo('template_url')?>/img/logo-color.svg" alt="Quincy Animal Shelter logo" onerror="this.src=<?php bloginfo('template_url')?>/img/logo.png; this.onerror=null;">
+					<img src="<?php bloginfo('template_url')?>/img/logo-color-vertical.svg" alt="Quincy Animal Shelter logo" onerror="this.src=<?php bloginfo('template_url')?>/img/logo-color-vertical.png; this.onerror=null;">
 				</a>
 
 				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="<?php esc_attr_e( 'Toggle navigation', 'understrap' ); ?>">
