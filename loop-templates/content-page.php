@@ -97,6 +97,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				</div>
 
+				<?php wp_reset_postdata(); ?>
+
 			<?php else: ?>
 
 				<div class="text-md-center">
@@ -156,6 +158,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 				<?php endforeach; ?>
 
 				</div>
+
+				<?php wp_reset_postdata(); ?>
 
 			<?php else: ?>
 
