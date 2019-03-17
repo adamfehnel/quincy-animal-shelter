@@ -104,3 +104,13 @@ add_filter( 'get_the_archive_title', function ($title) {
     return $title;
 
 });
+
+function wpdocs_custom_excerpt_length( $length ) {
+    return 20;
+}
+add_filter( 'excerpt_length', 'wpdocs_custom_excerpt_length', 999 );
+
+function new_excerpt_more($more) {
+    return ' ...';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
