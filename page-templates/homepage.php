@@ -82,7 +82,9 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$adoptionInfo = get_page_by_title('Home', OBJECT, 'page');
 					if ( isset( $adoptionInfo ) ) :
 					?>
-						<?php echo $adoptionInfo->post_content; ?>
+						<div class="py-4">
+							<?php echo $adoptionInfo->post_content; ?>
+						</div>
 					<?php endif; ?>
 
 					<?php
@@ -123,7 +125,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 									<?php endforeach; ?> 
 
 								</div>
-								<div class="row justify-content-center pt-4">
+								<div class="row justify-content-center pt-4 mb-3">
 									<a class="btn btn-danger px-5 py-2" href="/adopt/">Adopt a Pet</a>
 								</div>
 							</div>
@@ -161,7 +163,7 @@ $container = get_theme_mod( 'understrap_container_type' );
 										<?php endforeach; ?> 
 
 									</div>
-									<div class="row justify-content-center pt-4">
+									<div class="row justify-content-center pt-4 mb-3">
 										<a class="btn btn-danger px-5 py-2" href="/category/success-stories/">More Success Stories</a>
 									</div>
 								</div>
@@ -206,35 +208,37 @@ $container = get_theme_mod( 'understrap_container_type' );
 					$posts = get_posts( $args );
 					?>
 					<?php if ( !empty( $posts ) ) : ?>
-						<h2 class="text-center pt-5 pb-4">
-							<a href="/get-involved/" class="text-inherit">Ways To Help</a>
-						</h2>
-						<div class="row">
-									
-							<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-								<?php
-									$goodLink = get_post_meta($post->ID, 'alternateLink', true);
-									if ( empty( $goodLink ) ) {
-										$goodLink = get_the_permalink();
-									}
-								?>
-								<div class="col-sm-6 col-md">
-									<p>
-										<a href="<?php echo $goodLink; ?>">
-											<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
-										</a>
-									</p>
-									<p class="h5">
-										<a href="<?php echo $goodLink; ?>" class="text-inherit"><strong><?php the_title(); ?></strong></a>
-									</p>
-									<p><?php the_content(); ?></p>
-								</div>
+						<div class="py-4">
+							<h2 class="text-center pt-5 pb-4">
+								<a href="/get-involved/" class="text-inherit">Ways To Help</a>
+							</h2>
+							<div class="row">
+										
+								<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
+									<?php
+										$goodLink = get_post_meta($post->ID, 'alternateLink', true);
+										if ( empty( $goodLink ) ) {
+											$goodLink = get_the_permalink();
+										}
+									?>
+									<div class="col-sm-6 col-md">
+										<p>
+											<a href="<?php echo $goodLink; ?>">
+												<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
+											</a>
+										</p>
+										<p class="h5">
+											<a href="<?php echo $goodLink; ?>" class="text-inherit"><strong><?php the_title(); ?></strong></a>
+										</p>
+										<p><?php the_content(); ?></p>
+									</div>
 
-							<?php endforeach; ?>
-						
-						</div>
-						<div class="row justify-content-center pt-4">
-							<a class="btn btn-primary px-5 py-2" href="/get-involved/volunteering/">Join Our Team</a>
+								<?php endforeach; ?>
+							
+							</div>
+							<!-- <div class="row justify-content-center pt-4">
+								<a class="btn btn-primary px-5 py-2" href="/get-involved/volunteering/">Join Our Team</a>
+							</div> -->
 						</div>
 					<?php endif; ?>
 
