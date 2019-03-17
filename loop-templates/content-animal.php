@@ -12,11 +12,27 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 
-	<header class="entry-header">
+	<div class="row align-items-end">
+		<div class="col-md-7">
+			<header class="entry-header">
 
-		<?php the_title( '<h1 class="entry-title pb-3">', '</h1>' ); ?>
+				<?php the_title( '<h1 class="entry-title pb-3">', '</h1>' ); ?>
 
-	</header><!-- .entry-header -->
+			</header><!-- .entry-header -->
+		</div>
+		<div class="col-md-5" style="padding-bottom: 2.2rem;">
+			<a href="/adopt/" class="btn btn-sm px-md-1 px-lg-3 py-2 btn-danger">Adoption info</a>
+			<a href="#" id="submit-sponsor-pet-form" class="btn btn-sm px-md-1 px-lg-3 py-2 btn-light">Sponsor <?php echo get_the_title(); ?></a>
+
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="donate-sponsor-pet-form">
+				<input type="hidden" name="business" value="qasadopt@msn.com">
+				<input type="hidden" name="cmd" value="_donations">
+				<input type="hidden" name="item_name" value="Sponsor a pet">
+				<input type="hidden" name="item_number" value="<?php echo get_the_title(); ?>">
+				<input type="hidden" name="currency_code" value="USD">
+			</form>
+		</div>
+	</div>
 
 	<div class="entry-content">
 
@@ -147,17 +163,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 				</p>
 			</div>
 			<div class="col-md-5">
-
-				<a href="/adopt/" class="btn btn-block py-2 btn-danger">Adoption information</a>
-				<a href="#" id="submit-sponsor-pet-form" class="btn btn-block py-2 btn-light mb-4">Sponsor <?php echo get_the_title(); ?></a>
-
-				<form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank" id="donate-sponsor-pet-form">
-					<input type="hidden" name="business" value="qasadopt@msn.com">
-					<input type="hidden" name="cmd" value="_donations">
-					<input type="hidden" name="item_name" value="Sponsor a pet">
-					<input type="hidden" name="item_number" value="<?php echo get_the_title(); ?>">
-					<input type="hidden" name="currency_code" value="USD">
-				</form>
 
 				<?php 
 				$firstPetPointImageShown = false;
