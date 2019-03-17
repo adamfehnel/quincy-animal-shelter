@@ -55,8 +55,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php endif; ?>
 
 		<?php elseif ( is_page('adopt-a-dog') ) : ?>
-			
-			<?php the_content(); ?>
 
 			<?php
 			global $post;
@@ -99,12 +97,24 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				</div>
 
+			<?php else: ?>
+
+				<div class="text-md-center">
+					<p class="display-1 mb-3">Sorry</p>
+					<p class="h4 text-300 mb-2">There are no adoptable dogs available right now.</p>
+					<p class="h4 text-300">Check back soon.</p>
+				</div>
+
 			<?php endif; ?>
+
+			<hr class="my-5">
+			
+			<h4 class="mb-4">General Dog Information</h4>
+
+			<?php the_content(); ?>
 
 		<?php elseif ( is_page('adopt-a-cat') ) : ?>
 			
-			<?php the_content(); ?>
-
 			<?php
 			global $post;
 			$args = array( 'numberposts' => 99, 'category_name' => 'cats' );
@@ -147,7 +157,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 				</div>
 
+			<?php else: ?>
+
+				<div class="text-md-center">
+					<p class="display-1 mb-3">Sorry</p>
+					<p class="h4 text-300 mb-2">There are no adoptable cats available right now.</p>
+					<p class="h4 text-300">Check back soon.</p>
+				</div>
+
 			<?php endif; ?>
+
+			<hr class="my-5">
+			
+			<h4 class="mb-4">General Cat Information</h4>
+
+			<?php the_content(); ?>
 
 			<div class="mt-5 text-center"><a href="/adopt/adopt-a-kitten/" class="btn btn-danger btn-sm px-3 py-2">Looking for a kitten?</a></div>
 
