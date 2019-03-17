@@ -202,6 +202,32 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endif; ?> -->
 
+					<div class="full-width green py-3">
+						<div class="container">
+							<div class="row justify-content-center">
+								<div class="col col-auto" id="scoop-signup-form-wrapper">
+									<form name="embedded_signup" class="ctct-custom-form Form form-inline h5 mb-0 d-block d-md-flex text-center" id="embedded_signup" action="https://visitor2.constantcontact.com/api/signup" method="post" data-id="embedded_signup:form" _lpchecked="1">
+										<input name="ca" type="hidden" data-id="ca:input" value="dbe9ae08-07f9-4440-9af1-95db0edd9945">
+										<input name="source" type="hidden" data-id="source:input" value="EFD">
+										<input name="required" type="hidden" data-id="required:input" value="list,email">
+										<input name="url" type="hidden" data-id="url:input">
+										<input name="first_name" type="text" data-id="First Name:input" value="" class="d-none">
+										<input name="last_name" type="text" data-id="Last Name:input" value="" class="d-none">
+										<input name="list_0" type="checkbox" data-id="Lists:input" value="4" checked="checked" class="d-none">
+										<input name="list_1" type="checkbox" data-id="Lists:input" value="1" checked="checked" class="d-none">
+										<input name="list_2" type="checkbox" data-id="Lists:input" value="3" checked="checked" class="d-none">
+										<div class="mt-3 mt-md-0">Get "The Scoop" About QAS</div>
+										<div class="form-group mx-md-3">
+											<label for="scoop-email" class="sr-only">Email address</label>
+											<input name="email" type="email" class="form-control w-100 my-3 my-md-0" id="scoop-email" placeholder="person@example.com" data-id="Email Address:input">
+										</div>
+										<button type="submit" class="btn btn-light mb-3 mb-md-0" id="scoop-signup-submit">Sign Up</button>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+
 					<?php
 					global $post;
 					$args = array( 'numberposts' => 4, 'category_name' => 'ways-to-help' );
@@ -308,31 +334,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 
 					<?php endif; ?>
 
-					<div class="full-width green py-3">
-						<div class="container">
-							<div class="row justify-content-center">
-								<div class="col col-auto" id="scoop-signup-form-wrapper">
-									<form name="embedded_signup" class="ctct-custom-form Form form-inline h5 text-300 mb-0 d-block d-md-flex text-center" id="embedded_signup" action="https://visitor2.constantcontact.com/api/signup" method="post" data-id="embedded_signup:form" _lpchecked="1">
-										<input name="ca" type="hidden" data-id="ca:input" value="dbe9ae08-07f9-4440-9af1-95db0edd9945">
-										<input name="source" type="hidden" data-id="source:input" value="EFD">
-										<input name="required" type="hidden" data-id="required:input" value="list,email">
-										<input name="url" type="hidden" data-id="url:input">
-										<input name="first_name" type="text" data-id="First Name:input" value="" class="d-none">
-										<input name="last_name" type="text" data-id="Last Name:input" value="" class="d-none">
-										<input name="list_0" type="checkbox" data-id="Lists:input" value="4" checked="checked" class="d-none">
-										<input name="list_1" type="checkbox" data-id="Lists:input" value="1" checked="checked" class="d-none">
-										<input name="list_2" type="checkbox" data-id="Lists:input" value="3" checked="checked" class="d-none">
-										<div class="mt-3 mt-md-0">Get "The Scoop" About QAS</div>
-										<div class="form-group mx-md-3">
-											<label for="scoop-email" class="sr-only">Email address</label>
-											<input name="email" type="email" class="form-control w-100 my-3 my-md-0" id="scoop-email" placeholder="person@example.com" data-id="Email Address:input">
-										</div>
-										<button type="submit" class="btn btn-light mb-3 mb-md-0" id="scoop-signup-submit">Sign Up</button>
-									</form>
-								</div>
-							</div>
-						</div>
-					</div>
 
 				</main><!-- #main -->
 
