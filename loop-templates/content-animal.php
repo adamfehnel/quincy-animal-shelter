@@ -119,12 +119,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<td class="text-600"><?php echo $note; ?></td>
 							</tr>
 						<?php endif; ?>
+						<!--
 						<?php if ( !empty($animalID) ) : ?>
 							<tr>
 								<td>Animal ID</td>
 								<td class="text-600"><?php echo $animalID; ?></td>
 							</tr>
 						<?php endif; ?>
+						-->
 						<?php if ( !empty($declawed) ) : ?>
 							<tr>
 								<td>Declawed</td>
@@ -143,12 +145,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 								<td class="text-600"><?php echo $intakeDate; ?></td>
 							</tr>
 						<?php endif; ?>
+						<!--
 						<?php if ( !empty($arn) ) : ?>
 							<tr>
 								<td>ARN</td>
 								<td class="text-600"><?php echo $arn; ?></td>
 							</tr>
 						<?php endif; ?>
+						-->
 					</tbody>
 				</table>
 
