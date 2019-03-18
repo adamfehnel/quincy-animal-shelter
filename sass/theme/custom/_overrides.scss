@@ -12,3 +12,17 @@
 	color: $danger !important;
 	border: 1px solid $danger;
 }
+
+
+
+@include media-breakpoint-down( md ) {
+
+	.ai1ec_event {
+
+		.col-md-7,
+		.col-md-5 {
+			flex: 0 0 100%;
+			max-width: 100%;
+		}	
+	}
+}
