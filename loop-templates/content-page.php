@@ -102,9 +102,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php else: ?>
 
 				<div class="text-md-center py-5">
-					<!--<p class="display-1 mb-3">:(</p>-->
-					<p class="h4 text-300 mb-2">We are working to clear our dogs for adoption.</p>
-					<p class="h4 text-300 mb-0">Stay tuned!</p>
+					<p class="display-4 mb-3">Stay tuned!</p>
+					<p class="h4 text-300 mb-2">We're getting our dogs ready for adoption!</p>
 				</div>
 
 			<?php endif; ?>
@@ -164,9 +163,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php else: ?>
 
 				<div class="text-md-center py-5">
-					<!--<p class="display-1 mb-3">:(</p>-->
-					<p class="h4 text-300 mb-2">We are working to clear our cats for adoption.</p>
-					<p class="h4 text-300 mb-0">Stay tuned!</p>
+					<p class="display-4 mb-3">Stay tuned!</p>
+					<p class="h4 text-300 mb-2">We're getting our cats ready for adoption!</p>
 				</div>
 
 			<?php endif; ?>
