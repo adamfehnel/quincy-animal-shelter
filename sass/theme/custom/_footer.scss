@@ -3,19 +3,36 @@
 }
 
 #wrapper-footer {
-
-	font-size: 0.8em;
+	font-size: 0.9rem;
+	background-color: #F5F5F5;
 
 	a {
 		color: #212529;
 	}
 
+	.adoption-info {
+
+		.col-6 {
+			line-height: 1.6rem;
+			margin-bottom: 0.6rem;
+		}
+
+		small {
+			font-size: 0.9rem;
+		}
+	}
+
 	.social-icons {
-		font-size: 2em;
+		font-size: 1.7rem;
 
 		a {
 			color: $primary;
 		}
+	}
+
+	.lower {
+
+		font-size: 0.65rem;
 	}
 }
 

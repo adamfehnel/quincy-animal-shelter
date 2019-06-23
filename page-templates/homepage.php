@@ -303,38 +303,6 @@ $container = get_theme_mod( 'understrap_container_type' );
 						</div>
 					</div>
 
-					<?php
-					global $post;
-					$args = array( 'numberposts' => 3, 'category_name' => 'sponsors' );
-					$posts = get_posts( $args );
-					?>
-					<?php if ( !empty( $posts ) ) : ?>
-						<!-- <h2 class="text-center pt-5 pb-2">
-							<a href="/get-involved/become-a-sponsor/" class="text-inherit">Sponsors</a>
-						</h2> -->
-						
-						<div class="row justify-content-center mt-5 pb-5">
-						<?php foreach( $posts as $post ): setup_postdata( $post ); ?>
-							<?php
-								$goodLink = get_post_meta($post->ID, 'alternateLink', true);
-								if ( empty( $goodLink ) ) {
-									$goodLink = get_the_permalink();
-								}
-							?>
-							<div class="col col-auto text-center">
-								<a href="<?php echo $goodLink; ?>" target="_blank">
-									<?php the_post_thumbnail( 'medium', ['class' => 'w-100'] ); ?>
-								</a>
-								<h6 class="pt-2">
-									<a href="<?php echo $goodLink; ?>" target="_blank" class="text-inherit"><?php the_title(); ?></a>
-								</h6>
-							</div>
-						<?php endforeach; ?>
-						</div>
-
-					<?php endif; ?>
-
-
 				</main><!-- #main -->
 
 			</div><!-- #primary -->
